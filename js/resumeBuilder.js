@@ -5,7 +5,7 @@ var bio = {
     "contacts": {"email": "eyal.chistik@gmail.com","github": "eyal352", "twitter":"@Eyal352", "location": "Tel Aviv"},
 	"biopic": "https://avatars1.githubusercontent.com/u/16916606?v=3&s=460",
 	"welcomeMessage": "Welcome To Eyal's Bio Page",
-	 "skills": ["JavaScript", "jQuery", "HTML", "CSS", "Responsive Design", "BootStrap", "Python", "Marketing", "Advertising", "Design", "Surfing"]
+	 "skills": ["JavaScript", "jQuery", "HTML5", "CSS3", "BootStrap", "Python", "Marketing", "Advertising", "Design"]
 };
 
 var contactItem = {
