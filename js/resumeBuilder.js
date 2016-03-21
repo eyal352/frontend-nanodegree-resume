@@ -109,14 +109,14 @@ projects.display = function() {
     var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].Description);
     $(".project-entry:last").append(formattedDescription);
 
-  }
+  
         //  var formattedImage = HTMLprojectImage.replace("%data%", project.projects[project].Images);
     // $(".project-entry:last").append(formattedImage);
-    /* for (image in projects.projects[project].Images) {
-			var formattedImage = HTMLprojectImage.replace("%data%",projects.project[item].images[image]);
+     for (image in projects.projects[project].Images) {
+			var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].Images[image]);
 			$(".project-entry:last").append(formattedImage);
-        } */
-
+        }
+    }
 };
 
 work.display = function () {
