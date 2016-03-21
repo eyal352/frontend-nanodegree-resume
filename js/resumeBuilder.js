@@ -2,17 +2,18 @@
 var bio = {
 	"name": "Eyal Chistik",
     "role": "Front End Developer",
-    "contacts": {"email": "eyal.chistik@gmail.com","github": "eyal352", "twitter":"@Eyal352", "location": "Tel Aviv"},
+    "contacts": {"email": "eyal.chistik@gmail.com","github": "eyal352", "twitter":"@Eyal352",
+    "location": "Tel Aviv"},
 	"biopic": "https://avatars1.githubusercontent.com/u/16916606?v=3&s=460",
 	"welcomeMessage": "Welcome To Eyal's Bio Page",
 	 "skills": ["JavaScript", "jQuery", "HTML5", "CSS3", "BootStrap", "Python", "Marketing", "Advertising", "Design"]
 };
 
 var contactItem = {
-    "email" : "email",
-    "github" : "github",
-    "twitter" : "twitter",
-    "location" : "location"
+    "email" : '<i class="fa fa-envelope-o"></i>',
+    "github" : '<i class="fa fa-github"></i></a>',
+    "twitter" : '<i class="fa fa-twitter"></i>',
+    "location" : '<i class="fa fa-location-arrow"></i>'
 };
 
 var work = {
@@ -22,7 +23,7 @@ var work = {
 			"Title" : "Customer Relations Manager",
 			"Location" : "Tel Aviv, Israel",
 			"Dates" : "January 2015 - February 2016",
-			"Description" : "Provide comprehensive solutions to advertisers to help reach their marketing goals and KPIs through digital advertising campaigns. Manage multiple pixel and subID implementations for tracking and optimizing campaigns. Build and implement S2S and other tracking links (Appsflyer, Adjust, Tune, etc.) to analyze and optimize digital campaigns •Manage and scale multiple mobile advertising and marketing campaigns across different countries and regions.",
+			"Description" : "Provide comprehensive solutions to advertisers to help reach their marketing goals and KPIs through digital advertising campaigns. Manage multiple pixel and subID implementations for tracking and optimizing campaigns. Build and implement S2S and other tracking links (Appsflyer, Adjust, Tune, etc.) to analyze and optimize digital campaigns Manage and scale multiple mobile advertising and marketing campaigns across different countries and regions.",
             "url" : "http://www.adgorithms.com/"
 		},
 		{
@@ -84,6 +85,7 @@ bio.display = function() {
     for (contact in bio.contacts) {
         formattedContact = HTMLcontactGeneric.replace("%contact%", contactItem[contact]).replace("%data%", bio.contacts[contact]);
         $("#footerContacts").append(formattedContact);
+        $("#topContacts").append(formattedContact);
     }
 
     for (skill in bio.skills) {
@@ -107,13 +109,14 @@ projects.display = function() {
     var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].Description);
     $(".project-entry:last").append(formattedDescription);
 
-  //  var formattedImage = HTMLprojectImage.replace("%data%", project.projects[project].Images);
-    //$(".project-entry:last").append(formattedImage);
-    /*    for (image in projects.projects[project].Images) {
+  }
+        //  var formattedImage = HTMLprojectImage.replace("%data%", project.projects[project].Images);
+    // $(".project-entry:last").append(formattedImage);
+    /* for (image in projects.projects[project].Images) {
 			var formattedImage = HTMLprojectImage.replace("%data%",projects.project[item].images[image]);
 			$(".project-entry:last").append(formattedImage);
-        }; */
-    }
+        } */
+
 };
 
 work.display = function () {

@@ -13,7 +13,7 @@ These are HTML strings. As part of the course, you'll be using JavaScript functi
 replace the %data% placeholder text you see in them.
 */
 var HTMLheaderName = '<h1 id="name">%data%</h1>';
-var HTMLheaderRole = '<span>%data%</span><hr>';
+var HTMLheaderRole = '<span id="role">%data%</span><hr>';
 
 var HTMLcontactGeneric = '<li class="flex-item"><span class="orange-text">%contact%</span><span class="white-text">%data%</span></li>';
 var HTMLmobile = '<li class="flex-item"><span class="orange-text">mobile</span><span class="white-text">%data%</span></li>';
@@ -109,7 +109,126 @@ function initializeMap() {
   var locations;
 
   var mapOptions = {
-    disableDefaultUI: true
+    disableDefaultUI: false,
+    scrollwheel: false,
+    styles: [
+    {
+        "featureType": "landscape",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 65
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 51
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 30
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "lightness": 40
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "lightness": -25
+            },
+            {
+                "saturation": -100
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "hue": "#ffff00"
+            },
+            {
+                "lightness": -25
+            },
+            {
+                "saturation": -97
+            }
+        ]
+    }
+]
   };
 
   /* 
@@ -180,6 +299,7 @@ function initializeMap() {
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+        infoWindow.open(map,marker);
     });
 
     // this is where the pin actually gets added to the map.
@@ -251,38 +371,4 @@ map.fitBounds(mapBounds);
 });
 
 // changing the style of the map
-
-    var styles = [
-	{
-		featureType: 'landscape',
-		elementType: 'all',
-		stylers: [
-			{ hue: '#e9e9e9' },
-			{ saturation: -100 },
-			{ lightness: 22 },
-			{ visibility: 'on' }
-		]
-	},{
-		featureType: 'water',
-		elementType: 'geometry',
-		stylers: [
-			{ hue: '#ffff00' },
-			{ saturation: 100 },
-			{ lightness: -34 },
-			{ visibility: 'on' }
-		]
-	}
-];
-var options = {
-	mapTypeControlOptions: {
-		mapTypeIds: [ 'Styled']
-	},
-	center: new google.maps.LatLng(46.38136636533759, 9.83632812500002),
-	zoom: 4,
-	mapTypeId: 'Styled'
-};
-var div = document.getElementById('map');
-var map = new google.maps.Map(div, options);
-var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
-map.mapTypes.set('Styled', styledMapType);
 
