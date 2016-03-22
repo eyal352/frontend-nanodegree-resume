@@ -23,7 +23,7 @@ var work = {
 			"Title" : "Customer Relations Manager",
 			"Location" : "Tel Aviv, Israel",
 			"Dates" : "January 2015 - February 2016",
-			"Description" : "Provide comprehensive solutions to advertisers to help reach their marketing goals and KPIs through digital advertising campaigns. Manage multiple pixel and subID implementations for tracking and optimizing campaigns. Build and implement S2S and other tracking links (Appsflyer, Adjust, Tune, etc.) to analyze and optimize digital campaigns Manage and scale multiple mobile advertising and marketing campaigns across different countries and regions.",
+			"Description" : "Provided comprehensive solutions to advertisers to help reach their marketing goals and KPIs through digital advertising campaigns. Managed multiple pixel and subID implementations for tracking and optimizing campaigns. Built and implemented S2S and other tracking links (Appsflyer, Adjust, Tune, etc.). Managed and scaled multiple mobile advertising and marketing campaigns across different countries and regions.",
             "url" : "http://www.adgorithms.com/"
 		},
 		{
@@ -42,7 +42,7 @@ var projects = {
 		{
 			"Title" : "StudioMunk",
 			"Dates" : "2013",
-			"Description" :"An online music streaming platform integrating social media and allowing users to stream and share their favorite music in an ad-free environment.",
+			"Description" :"Used HTML, CSS, and Javascript to build an online music streaming platform integrating social media and allowing users to stream and share their favorite music in an ad-free environment.",
 			"Images" : ["http://www.studiomunk.com/images/toplogo.png"],
             "url" : "http://www.studiomunk.com/"
 		},
