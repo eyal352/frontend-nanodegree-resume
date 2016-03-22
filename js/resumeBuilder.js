@@ -11,7 +11,7 @@ var bio = {
 
 var contactItem = {
     "email" : '<i class="fa fa-envelope-o"></i>',
-    "github" : '<i class="fa fa-github"></i></a>',
+    "github" : '<i class="fa fa-github"></i>',
     "twitter" : '<i class="fa fa-twitter"></i>',
     "location" : '<i class="fa fa-location-arrow"></i>'
 };
@@ -45,9 +45,17 @@ var projects = {
 			"Description" :"An online music streaming platform integrating social media and allowing users to stream and share their favorite music in an ad-free environment.",
 			"Images" : ["http://www.studiomunk.com/images/toplogo.png"],
             "url" : "http://www.studiomunk.com/"
-		}
+		},
+        {
+            "Title" : "Portfolio Project",
+            "Dates" : "2016",
+            "Description" : "A fully responsive portfolio site outlining my current and previous projects.",
+            "Images" : " ",
+            "url" : "http://eyal352.github.io"
+        }
 	]
 };
+
 
 var education = {
 	"schools" : [
@@ -109,10 +117,7 @@ projects.display = function() {
     var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].Description);
     $(".project-entry:last").append(formattedDescription);
 
-  
-        //  var formattedImage = HTMLprojectImage.replace("%data%", project.projects[project].Images);
-    // $(".project-entry:last").append(formattedImage);
-     for (image in projects.projects[project].Images) {
+    for (image in projects.projects[project].Images) {
 			var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].Images[image]);
 			$(".project-entry:last").append(formattedImage);
         }

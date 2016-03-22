@@ -120,6 +120,12 @@ a {
  font-size: 1.0em;
 }
 
+.white-text:hover {
+  font-weight: bold;
+  color: slategray;
+ font-size: 1.0em;
+}
+
 .gray {
   background-color: #f3f3f3;
   padding-bottom: 10px;
