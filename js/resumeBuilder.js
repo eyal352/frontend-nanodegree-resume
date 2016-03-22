@@ -50,7 +50,7 @@ var projects = {
             "Title" : "Portfolio Project",
             "Dates" : "2016",
             "Description" : "A fully responsive portfolio site outlining my current and previous projects.",
-            "Images" : " ",
+            "Images" : ["https://raw.githubusercontent.com/eyal352/interactive-resume/gh-pages/images/portfolio.png"],
             "url" : "http://eyal352.github.io"
         }
 	]
