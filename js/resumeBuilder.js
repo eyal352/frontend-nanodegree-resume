@@ -5,7 +5,7 @@ var bio = {
     "contacts": {"email": "<a href='mailto:eyal.chistik@gmail.com' id='contact'>eyal.chistik@gmail.com</a>", "github": "<a href='https://github.com/eyal352' id='contact'>eyal352</a>", "twitter":"<a href='https://twitter.com/Eyal352' id='contact'>@Eyal352",
     "location": "<a href='https://www.google.com/#q=tel+aviv' id='contact'>Tel Aviv</a>"},
 	"biopic": "https://avatars1.githubusercontent.com/u/16916606?v=3&s=460",
-	"welcomeMessage": "Passionate about all things technical and cyber related",
+	"welcomeMessage": "Passionate about all things technical and cyber",
 	 "skills": ["JavaScript", "jQuery", "HTML5", "CSS3", "BootStrap", "Python", "Marketing", "Advertising", "Design"]
 };
 
