@@ -5,7 +5,7 @@ var bio = {
     "contacts": {"email": "eyal.chistik@gmail.com","github": "eyal352", "twitter":"@Eyal352",
     "location": "Tel Aviv"},
 	"biopic": "https://avatars1.githubusercontent.com/u/16916606?v=3&s=460",
-	"welcomeMessage": "Welcome To Eyal's Bio Page",
+	"welcomeMessage": "Passionate about all things technical and cyber related",
 	 "skills": ["JavaScript", "jQuery", "HTML5", "CSS3", "BootStrap", "Python", "Marketing", "Advertising", "Design"]
 };
 
@@ -41,7 +41,7 @@ var projects = {
 	"projects" : [
 		{
 			"Title" : "StudioMunk",
-			"Dates" : "2013",
+			"Dates" : "2013 - Ongoing",
 			"Description" :"Used HTML, CSS, and Javascript to build an online music streaming platform integrating social media and allowing users to stream and share their favorite music in an ad-free environment.",
 			"Images" : ["http://www.studiomunk.com/images/toplogo.png"],
             "url" : "http://www.studiomunk.com/"
@@ -77,6 +77,82 @@ var education = {
 		}
 	]
 };
+
+var skills = {
+  "skills": [{
+    id : "HTML",
+    value: 0.6,
+    text: "HTML"
+  },
+  {
+    id : "CSS",
+    value: 0.8,
+    text: "CSS"
+  },
+  {
+    id : "Javascript",
+    value: 0.6,
+    text: "Javascript"
+  },
+  {id : "Bootstrap",
+   value : "0.5",
+   text : "Bootstrap"}],
+};
+
+var circles = {};
+
+skills.display = function() {
+  for(var skill in skills.skills) {
+    var progressbarName = HTMLProgressName.replace("%data%", skills.skills[skill].text);
+    var progressbar = HTMLCircleProgress.replace("%data%", skills.skills[skill].id);
+    $("#skillsprogress").append(progressbar);
+    $(".progress:last").append(progressbarName);
+  }
+ // $("#skillsprogress").append(clearfix);
+};
+
+skills.createCircles = function() {
+  for(var skill in skills.skills) {
+  var id = "#" + skills.skills[skill].id;
+  var circle = new ProgressBar.Circle(id,{
+      text : {
+        value : 0
+      },
+      step : function(state, bar) {
+        bar.setText((bar.value() * 100).toFixed(0) + "%");
+      },
+      trailColor: '#f4f4f4',
+      color: '#1199c3',
+      strokeWidth: 2,
+      duration: 3000,
+      easing: 'easeInOut'
+    });
+  circles[skills.skills[skill].id] = circle;
+  }
+};
+
+skills.display();
+skills.createCircles();
+
+/* window.onload = function onLoad() {
+    var circle = new ProgressBar.Circle('#progress', {
+        text: {value: "text"},
+        style : {position: 'float-left'},
+        color: '#FCB03C',
+        duration: 3000,
+        easing: 'easeInOut',
+        svgStyle: {
+        display: 'flex',
+
+        // Important: make sure that your container has same
+        // aspect ratio as the SVG canvas. See SVG canvas sizes above.
+        width: '33%'
+    },
+    });
+
+    circle.animate(.9); //% complete
+};
+*/
 
 // functions for bio, work, projects, education, contact
 

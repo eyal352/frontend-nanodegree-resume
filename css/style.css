@@ -25,7 +25,7 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 45px;
   color: whitesmoke;
   line-height: 48px;
   display: inline;
@@ -41,7 +41,7 @@ h2 {
 
 h3 {
   font-style: italic;
-  font-size: 20px;
+  font-size: 25px;
   color: #000;
   line-height: 22px;
 }
@@ -61,13 +61,12 @@ h5 {
 
 }
 
-
 .date-text {
   font-style: italic;
-  font-size: 14px;
+  font-size: 15px;
   color: #999;
   line-height: 16px;
-  float: left;
+  float:left;
 }
 
 .location-text {
@@ -79,11 +78,14 @@ h5 {
 
 }
 
+
+
 p {
   font-size: 14px;
   color: #333;
-  line-height: 21px;
+  line-height: 22px;
   font-weight: 400;
+    display: 
 }
 
 a {
@@ -179,6 +181,29 @@ span {
   text-align: center;
 }
 
+.progress {
+  width: 22%;
+  float: left;
+  margin: 17px;
+}
+
+.progress .progressbar-text {
+    font-family:'';
+    font-size: 3rem;
+}
+
+.progress-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  position: absolute; 
+  left: 49%; 
+  top: 69%; 
+  padding: 0;
+  margin: 0; 
+  transform: translate(-50%, -50%); 
+  color: rgb(17, 153, 195);
+}
+
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
@@ -203,6 +228,7 @@ span {
   .welcome-message {
     display: none;
   }
+  
 }
 
 #map {
