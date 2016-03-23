@@ -2,8 +2,8 @@
 var bio = {
 	"name": "Eyal Chistik",
     "role": "Front End Developer",
-    "contacts": {"email": "eyal.chistik@gmail.com","github": "eyal352", "twitter":"@Eyal352",
-    "location": "Tel Aviv"},
+    "contacts": {"email": "<a href='mailto:eyal.chistik@gmail.com' id='contact'>eyal.chistik@gmail.com</a>", "github": "<a href='https://github.com/eyal352' id='contact'>eyal352</a>", "twitter":"<a href='https://twitter.com/Eyal352' id='contact'>@Eyal352",
+    "location": "<a href='https://www.google.com/#q=tel+aviv' id='contact'>Tel Aviv</a>"},
 	"biopic": "https://avatars1.githubusercontent.com/u/16916606?v=3&s=460",
 	"welcomeMessage": "Passionate about all things technical and cyber related",
 	 "skills": ["JavaScript", "jQuery", "HTML5", "CSS3", "BootStrap", "Python", "Marketing", "Advertising", "Design"]
@@ -69,7 +69,7 @@ var education = {
 		},
 		{
 			"name" : "Udacity",
-			"location" : "Mountain View, CA",
+			"location" : "Tel Aviv, Israel",
 			"degree" : "Nanodegree Credential",
 			"major" : "Front End Web Development",
 			"dates" : "January 2016 - Ongoing",
@@ -81,17 +81,17 @@ var education = {
 var skills = {
   "skills": [{
     id : "HTML",
-    value: 0.6,
+    value: 0.7,
     text: "HTML"
   },
   {
     id : "CSS",
-    value: 0.8,
+    value: 0.7,
     text: "CSS"
   },
   {
     id : "Javascript",
-    value: 0.6,
+    value: 0.5,
     text: "Javascript"
   },
   {id : "Bootstrap",
@@ -124,7 +124,7 @@ skills.createCircles = function() {
       trailColor: '#f4f4f4',
       color: '#1199c3',
       strokeWidth: 2,
-      duration: 3000,
+      duration: 2500,
       easing: 'easeInOut'
     });
   circles[skills.skills[skill].id] = circle;
@@ -133,26 +133,6 @@ skills.createCircles = function() {
 
 skills.display();
 skills.createCircles();
-
-/* window.onload = function onLoad() {
-    var circle = new ProgressBar.Circle('#progress', {
-        text: {value: "text"},
-        style : {position: 'float-left'},
-        color: '#FCB03C',
-        duration: 3000,
-        easing: 'easeInOut',
-        svgStyle: {
-        display: 'flex',
-
-        // Important: make sure that your container has same
-        // aspect ratio as the SVG canvas. See SVG canvas sizes above.
-        width: '33%'
-    },
-    });
-
-    circle.animate(.9); //% complete
-};
-*/
 
 // functions for bio, work, projects, education, contact
 

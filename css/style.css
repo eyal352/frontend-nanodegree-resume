@@ -85,7 +85,7 @@ p {
   color: #333;
   line-height: 22px;
   font-weight: 400;
-    display: 
+  display: ;
 }
 
 a {
@@ -93,6 +93,20 @@ a {
   text-decoration: none;
   margin-top: 10px;
   display: block;
+}
+
+#contact {
+   display: inline-flex;
+   color:aliceblue;
+
+}
+#contact:hover {
+    color:dodgerblue;
+}
+
+#role {
+    font-size: 23px;
+    font-weight: 500;
 }
 
 .welcome-message {
@@ -114,6 +128,7 @@ a {
 
 .orange-text {
   color: lightslategray;
+  font-size: 19px;
 }
 
 .white-text {
@@ -181,19 +196,28 @@ span {
   text-align: center;
 }
 
+#education{
+
+}
+
+#skillsprogress{
+
+}
+
 .progress {
-  width: 22%;
+  width: 23%;
   float: left;
-  margin: 17px;
+  margin-left: 17px;
+  padding-bottom: 12px;
 }
 
 .progress .progressbar-text {
-    font-family:'';
+    font-family: times;
     font-size: 3rem;
 }
 
 .progress-name {
-  font-family: 'Raleway', sans-serif;
+  font-family: times;
   font-size: 2rem;
   position: absolute; 
   left: 49%; 
@@ -216,6 +240,9 @@ span {
   .biopic {
     width: 175px;
   }
+    .progress {
+        width: 40%;
+    }
 }
 
 @media only screen and (max-width: 750px) {
@@ -228,7 +255,29 @@ span {
   .welcome-message {
     display: none;
   }
-  
+  .flex-box {
+        justify-content: flex-start;
+    }
+    .project-entry {
+        width: 60%;
+        margin: ;
+        float: none;
+        padding: 0 5%;
+    }
+    .progress-name {
+        font-size: 3rem;
+    }
+
+    .progress .progressbar-text {
+        font-size: 1.5;
+    }
+
+    .progress {
+        float: none;
+        width: 80%;
+        margin: 40px auto;
+        padding: 0;
+    }
 }
 
 #map {
