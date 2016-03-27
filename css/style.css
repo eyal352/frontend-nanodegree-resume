@@ -58,7 +58,6 @@ h3,
 h4,
 h5 {
   padding:10px 5%;
-
 }
 
 .date-text {
@@ -77,8 +76,6 @@ h5 {
   float: right;
 
 }
-
-
 
 p {
   font-size: 14px;
@@ -153,7 +150,6 @@ a {
   background-color: #4a4a4a;
 }
 
-/* TODO: Replace with image later */
 #header {
   background-color: #484848;
 }
@@ -196,19 +192,16 @@ span {
   text-align: center;
 }
 
-#education{
-
-}
-
-#skillsprogress{
-
+#main {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .progress {
   width: 23%;
   float: left;
   margin-left: 17px;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .progress .progressbar-text {
@@ -219,8 +212,8 @@ span {
 .progress-name {
   font-family: times;
   font-size: 2rem;
-  position: absolute; 
-  left: 49%; 
+  position: absolute;
+  left: 49%;
   top: 69%; 
   padding: 0;
   margin: 0; 
