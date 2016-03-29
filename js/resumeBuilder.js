@@ -1,8 +1,9 @@
 //Variables for bio, work, education, projects
+//'use strict';
 var bio = {
 	"name": "Eyal Chistik",
     "role": "Front End Developer",
-    "contacts": {"email": "<a href='mailto:eyal.chistik@gmail.com' id='contact'>eyal.chistik@gmail.com</a>", "github": "<a href='https://github.com/eyal352' id='contact'>eyal352</a>", "twitter":"<a href='https://twitter.com/Eyal352' id='contact'>@Eyal352",
+    "contacts": {"email": "<a href='mailto:eyal.chistik@gmail.com' id='contact'>eyal.chistik@gmail.com</a>", "github": "<a href='https://github.com/eyal352' id='contact'>eyal352</a>", "twitter": "<a href='https://twitter.com/Eyal352' id='contact'>@Eyal352",
     "location": "<a href='https://www.google.com/#q=tel+aviv' id='contact'>Tel Aviv</a>"},
 	"biopic": "https://avatars1.githubusercontent.com/u/16916606?v=3&s=460",
 	"welcomeMessage": "Passionate about all things technical and cyber",
@@ -42,7 +43,7 @@ var projects = {
 		{
 			"Title" : "StudioMunk",
 			"Dates" : "2013 - Ongoing",
-			"Description" :"Used HTML, CSS, and Javascript to build an online music streaming platform integrating social media and allowing users to stream and share their favorite music in an ad-free environment.",
+			"Description" : "Used HTML, CSS, and Javascript to build an online music streaming platform integrating social media and allowing users to stream and share their favorite music in an ad-free environment.",
 			"Images" : ["http://www.studiomunk.com/images/toplogo.png"],
             "url" : "http://www.studiomunk.com/"
 		},
@@ -96,13 +97,14 @@ var skills = {
   },
   {id : "Bootstrap",
    value : "0.5",
-   text : "Bootstrap"}],
+   text : "Bootstrap"}]
 };
 
 var circles = {};
 
 skills.display = function() {
-  for(var skill in skills.skills) {
+    'use strict';
+    for (var skill in skills.skills) {
     var progressbarName = HTMLProgressName.replace("%data%", skills.skills[skill].text);
     var progressbar = HTMLCircleProgress.replace("%data%", skills.skills[skill].id);
     $("#skillsprogress").append(progressbar);
@@ -112,7 +114,8 @@ skills.display = function() {
 };
 
 skills.createCircles = function() {
-  for(var skill in skills.skills) {
+    'use strict';
+    for(var skill in skills.skills) {
   var id = "#" + skills.skills[skill].id;
   var circle = new ProgressBar.Circle(id,{
       text : {
@@ -137,6 +140,7 @@ skills.createCircles();
 // functions for bio, work, projects, education, contact
 
 bio.display = function() {
+
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
     var bioPic = HTMLbioPic.replace("%data%", bio.biopic);
@@ -146,22 +150,30 @@ bio.display = function() {
     $("#header").append(welcomeMsg);
     $("#header").append(HTMLskillsStart);
 
-    for (contact in bio.contacts) {
+    for (var contact in bio.contacts) {
         formattedContact = HTMLcontactGeneric.replace("%contact%", contactItem[contact]).replace("%data%", bio.contacts[contact]);
         $("#footerContacts").append(formattedContact);
         $("#topContacts").append(formattedContact);
     }
 
-    for (skill in bio.skills) {
+ /*   for (var skill in bio.skills) {
         var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
     $("#skills").append(formattedSkills);
+    }   */
 
-    }
+    // Using a forEach loop instead of the for in above
 
+    bio.skills.forEach(function(skill){
+        var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
+        $("#skills").append(formattedSkills);
+    })
 };
 
+
+
 projects.display = function() {
-    for (project in projects.projects) {
+    'use strict';
+    for (var project in projects.projects) {
     $("#projects").append(HTMLprojectStart);
 
     var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].Title).replace("#", projects.projects[project].url);
@@ -173,7 +185,7 @@ projects.display = function() {
     var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].Description);
     $(".project-entry:last").append(formattedDescription);
 
-    for (image in projects.projects[project].Images) {
+    for (var image in projects.projects[project].Images) {
 			var formattedImage = HTMLprojectImage.replace("%data%",projects.projects[project].Images[image]);
 			$(".project-entry:last").append(formattedImage);
         }
@@ -181,8 +193,8 @@ projects.display = function() {
 };
 
 work.display = function () {
-
-    for (job in work.jobs) {
+    'use strict';
+    for (var job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
     var formattedEmployer = HTMLworkEmployer.replace("#", work.jobs[job].url).replace("%data%", work.jobs[job].Employer);
@@ -205,8 +217,8 @@ work.display = function () {
 
 
 education.display = function () {
-
-    for (school in education.schools){
+    'use strict';
+    for (var school in education.schools){
         $("#education").append(HTMLschoolStart);
 
         var formattedName = HTMLschoolName.replace("%data%",education.schools[school].name).replace("#", education.schools[school].url);
@@ -220,7 +232,7 @@ education.display = function () {
         $(".education-entry:last").append(formattedName + formattedDegree, formattedDates, formattedLocation, formattedMajor);
     }
 
-}
+};
 
 bio.display();
 work.display();
