@@ -154,13 +154,13 @@ bio.display = function() {
         $("#footerContacts").append(formattedContact);
         $("#topContacts").append(formattedContact);
     }
-
+// Vanilla JS Version
    for(var i = 0; i < bio.skills.length; i++) {
         var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
         $("#skills").append(formattedSkills);
     }
-//console.log(bio.skills[i])
-    
+
+// jQuery Method
 /*    $.each(bio.skills, function(i, val){
         var formattedSkills = HTMLskills.replace("%data%", val);
         $("#skills").append(formattedSkills);
