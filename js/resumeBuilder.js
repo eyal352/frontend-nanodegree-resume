@@ -155,17 +155,16 @@ bio.display = function() {
         $("#topContacts").append(formattedContact);
     }
 
-  /*  for (var skill in bio.skills) {
-        var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
-    $("#skills").append(formattedSkills);
-    } */
-
-    // Using a forEach loop instead of the for in above
-
-    $.each(bio.skills, function(i, val){
+   for(var i = 0; i < bio.skills.length; i++) {
+        var formattedSkills = HTMLskills.replace("%data%", bio.skills[i]);
+        $("#skills").append(formattedSkills);
+    }
+//console.log(bio.skills[i])
+    
+/*    $.each(bio.skills, function(i, val){
         var formattedSkills = HTMLskills.replace("%data%", val);
         $("#skills").append(formattedSkills);
-    })
+    }) */
     
 /*    bio.skills.forEach(function(skill){
         var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
