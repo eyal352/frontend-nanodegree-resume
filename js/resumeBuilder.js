@@ -103,7 +103,6 @@ var skills = {
 var circles = {};
 
 skills.display = function() {
-    'use strict';
     for (var skill in skills.skills) {
     var progressbarName = HTMLProgressName.replace("%data%", skills.skills[skill].text);
     var progressbar = HTMLCircleProgress.replace("%data%", skills.skills[skill].id);
@@ -114,7 +113,7 @@ skills.display = function() {
 };
 
 skills.createCircles = function() {
-    'use strict';
+
     for(var skill in skills.skills) {
   var id = "#" + skills.skills[skill].id;
   var circle = new ProgressBar.Circle(id,{
@@ -156,17 +155,22 @@ bio.display = function() {
         $("#topContacts").append(formattedContact);
     }
 
- /*   for (var skill in bio.skills) {
+  /*  for (var skill in bio.skills) {
         var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
     $("#skills").append(formattedSkills);
-    }   */
+    } */
 
     // Using a forEach loop instead of the for in above
 
-    bio.skills.forEach(function(skill){
-        var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
+    $.each(bio.skills, function(i, val){
+        var formattedSkills = HTMLskills.replace("%data%", val);
         $("#skills").append(formattedSkills);
     })
+    
+/*    bio.skills.forEach(function(skill){
+        var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
+        $("#skills").append(formattedSkills);
+    }) */
 };
 
 
