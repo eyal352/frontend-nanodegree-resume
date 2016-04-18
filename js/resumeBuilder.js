@@ -23,7 +23,7 @@ var work = {
 			"Employer" : "Adgorithms",
 			"Title" : "Customer Relations Manager",
 			"Location" : "Tel Aviv, Israel",
-			"Dates" : "January 2015 - February 2016",
+			"Dates" : "January 2015 - January 2016",
 			"Description" : "Provided comprehensive solutions to advertisers to help reach their marketing goals and KPIs through digital advertising campaigns. Managed multiple pixel and subID implementations for tracking and optimizing campaigns. Built and implemented S2S and other tracking links (Appsflyer, Adjust, Tune, etc.). Managed and scaled multiple mobile advertising and marketing campaigns across different countries and regions.",
             "url" : "http://www.adgorithms.com/"
 		},
